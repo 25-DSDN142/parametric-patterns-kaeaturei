@@ -1,5 +1,13 @@
 //your parameter variables go here!
 let middle = 0; //origin is now 0
+let cherry_rotation = 0; //rotation
+let cherry_size = 50; //making it bigger
+let cherry_shine = 30; 
+let cherry_shade = 10;
+let cherry_dot = 3; 
+let circleColour; //colour of circles rest of the parameter is on line 25
+let circleSize = 90; // smaller background circle size
+let bigCircle_size = 150 //background circle size
 
 
 function setup_wallpaper(pWallpaper) {
@@ -14,44 +22,48 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.grid_settings.cell_height = 200;
   pWallpaper.grid_settings.row_offset = 50;
 
+  circleColour = color(207, 99, 151, 80); //light green
+
 }
 
 function wallpaper_background() {
-  background(245, 208, 226);; //light pink colour
+  background(245, 208, 226); //light pink colour
+
 }
 
-
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  
+
   //background circles
   strokeWeight (0);
-  fill (224, 130, 176,100)
-  ellipse (middle+100,middle+100,150,150);
+  fill (circleColour);
+  ellipse (middle+100,middle+100,bigCircle_size,bigCircle_size);
+  ellipse (middle,middle,circleSize,circleSize);
+  ellipse (middle+200,middle+200,circleSize,circleSize);
+  ellipse (middle,middle+200,circleSize,circleSize);
+  ellipse (middle+200,middle,circleSize,circleSize);
 
-  ellipse (middle,middle,90,90);
-  ellipse (middle+200,middle+200,90,90);
-  ellipse (middle,middle+200,90,90);
-  ellipse (middle+200,middle,90,90);
 
   
   push();
   translate(90, 105); //this makes the cherry get to the middle of the grid
-
+  
+  rotate(cherry_rotation); // rotate around center
   //setup - run once when the code is first starts
 
   //shadow one
   strokeWeight(0);
   fill(69, 0, 0);
-  ellipse(middle -12, middle + 23, 40, 40);
-  ellipse(middle - 18, middle + 27, 40, 40);
+  ellipse(middle -12, middle + 23, cherry_size, cherry_size);
+  ellipse(middle - 18, middle + 27, cherry_size, cherry_size);
 
   //shadow two
   strokeWeight(0);
   fill(69, 0, 0);
-  ellipse(middle + 53, middle + 23, 40, 40);
-  ellipse(middle + 46, middle + 28, 40, 40);
+  ellipse(middle + 53, middle + 23, cherry_size, cherry_size);
+  ellipse(middle + 46, middle + 28, cherry_size, cherry_size);
 
   // cherry one
+
   strokeWeight(0);
 
   //if statement
@@ -60,9 +72,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 } else {
   fill(173, 26, 38); // bright red
 }
-  ellipse(middle - 30, middle + 20, 40, 40);
-  ellipse(middle - 15, middle + 20, 40, 40);
-  ellipse(middle - 22.5, middle + 27, 40, 40);
+  ellipse(middle - 30, middle + 20, cherry_size, cherry_size);
+  ellipse(middle - 15, middle + 20, cherry_size, cherry_size);
+  ellipse(middle - 22.5, middle + 27, cherry_size, cherry_size);
+
 
   //cherry two
   strokeWeight(0);
@@ -71,11 +84,11 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 } else {
   fill(173, 26, 38); // bright red
 }
-  ellipse(middle + 35, middle + 20, 40, 40);
-  ellipse(middle + 50, middle + 20, 40, 40);
-  ellipse(middle + 42.5, middle + 27, 40, 40);
+  ellipse(middle + 35, middle + 20, cherry_size, cherry_size);
+  ellipse(middle + 50, middle + 20, cherry_size, cherry_size);
+  ellipse(middle + 42.5, middle + 27, cherry_size, cherry_size);
 
-  //stem
+  //stem, the shape was created with the help of ChatGPT AI
   stroke(15, 51, 11);
   strokeWeight(2);
   noFill ();
@@ -108,14 +121,14 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   //shine on cherry
   strokeWeight(0);
   fill(255);
-  ellipse(middle - 30, middle + 20, 30, 30);
+  ellipse(middle - 30, middle + 20, cherry_shine, cherry_shine);
   strokeWeight(0);
    if (middle > -1) {
   fill(110, 24, 31); // darker red
 } else {
   fill(173, 26, 38); // bright red
 }
-  ellipse(middle - 27, middle + 23, 30, 30);
+  ellipse(middle - 27, middle + 23, cherry_shine, cherry_shine);
 
   strokeWeight(0);
   if (middle > -1) {
@@ -123,29 +136,29 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 } else {
   fill(173, 26, 38); // bright red
 }
-  ellipse(middle - 22, middle + 10, 10, 10);
+  ellipse(middle - 22, middle + 10, cherry_shade, cherry_shade);
   strokeWeight(0);
    if (middle > -1) {
   fill(110, 24, 31); // darker red
 } else {
   fill(173, 26, 38); // bright red
 }
-  ellipse(middle - 40, middle + 30, 10, 10);
+  ellipse(middle - 40, middle + 30, cherry_shade, cherry_shade);
   strokeWeight(0);
   fill(255);
-  ellipse(middle - 42, middle + 29, 3, 3);
+  ellipse(middle - 42, middle + 29, cherry_dot, cherry_dot);
 
   //shine on cherry
   strokeWeight(0);
   fill(255);
-  ellipse(middle + 35, middle + 20, 30, 30);
+  ellipse(middle + 35, middle + 20, cherry_shine, cherry_shine);
   strokeWeight(0);
     if (middle > -1) {
   fill(110, 24, 31); // darker red
 } else {
   fill(173, 26, 38); // bright red
 }
-  ellipse(middle + 38, middle + 23, 30, 30);
+  ellipse(middle + 38, middle + 23, cherry_shine, cherry_shine);
 
   strokeWeight(0);
     if (middle > -1) {
@@ -153,17 +166,17 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 } else {
   fill(173, 26, 38); // bright red
 }
-  ellipse(middle + 43, middle + 10, 10, 10);
+  ellipse(middle + 43, middle + 10, cherry_shade, cherry_shade);
   strokeWeight(0);
     if (middle > -1) {
   fill(110, 24, 31); // darker red
 } else {
   fill(173, 26, 38); // bright red
 }
-  ellipse(middle + 25, middle + 30, 10, 10);
+  ellipse(middle + 25, middle + 30, cherry_shade, cherry_shade);
   strokeWeight(0);
   fill(255);
-  ellipse(middle + 24, middle + 29, 3, 3);
+  ellipse(middle + 24, middle + 29, cherry_dot, cherry_dot);
 
   //shine on stem
   strokeWeight(0);
@@ -175,8 +188,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   ellipse(middle-21, middle + 2.5, 3, 5);
   ellipse(middle+42, middle + 2.5, 3, 5);
 
-    //if statement
-  if (middle == 80) {
+  //if statement
+  if (middle == -15) {
   strokeWeight (0);
   fill(245, 208, 226);
   ellipse(150,90,20,20);
@@ -186,6 +199,5 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   pop(); //end of the centering of the cherry, background doesn't need to be
 
-  
-
 }
+  
