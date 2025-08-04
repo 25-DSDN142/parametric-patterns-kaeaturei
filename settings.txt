@@ -3,8 +3,6 @@ You will need to fill out this file for hand in.
 The bellow is just an example, feel free to disregard this documents contents.
 
 
-Your final settings.txt will look something like this when you are finished:
-
 /////////////////////////////////
 
 Wallpaper 1:
@@ -25,7 +23,7 @@ function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(NINE_PORTRAIT);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width = 200;
@@ -56,7 +54,7 @@ function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(NINE_PORTRAIT);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width = 200;
@@ -86,7 +84,7 @@ function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(NINE_PORTRAIT);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width = 200;
@@ -117,7 +115,7 @@ function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(NINE_PORTRAIT);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width = 200;
@@ -148,14 +146,18 @@ function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(NINE_PORTRAIT);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width = 200;
   pWallpaper.grid_settings.cell_height = 200;
   pWallpaper.grid_settings.row_offset = 50;
 
-  circleColour = color( 207, 99, 151 ,90); 
+  circleColour = color( 207, 99, 151 ,90); //light pink colour
+
+  }
+function wallpaper_background() {
+  background(207, 99, 151); //dark pink colour
 
 }
 
@@ -163,20 +165,127 @@ function setup_wallpaper(pWallpaper) {
 
 Wallpaper 6:
 
+//your parameter variables go here!
+let middle = -1; //origin is now 0
+let cherry_rotation = 0; //rotation
+let cherry_size = 50; //making it bigger
+let cherry_shine = 30; 
+let cherry_shade = 10;
+let cherry_dot = 3; 
+let circleColour; //colour of circles rest of the parameter is on line 25
+let circleSize = 40; // smaller background circle size
+let bigCircle_size = 100 //background circle size
 
+
+function setup_wallpaper(pWallpaper) {
+  //pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset = 50;
+
+  circleColour = color(255 ,90); 
+
+}
 
 /////////////////////////////////
 
 Wallpaper 7:
 
+//your parameter variables go here!
+let middle = 0; //origin is now 0
+let cherry_rotation = 90; //rotation
+let cherry_size = 50; //making it bigger
+let cherry_shine = 30; 
+let cherry_shade = 10;
+let cherry_dot = 3; 
+let circleColour; //colour of circles rest of the parameter is on line 25
+let circleSize = 70; // smaller background circle size
+let bigCircle_size = 150 //background circle size
 
+
+function setup_wallpaper(pWallpaper) {
+  //pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset = 50;
+
+  circleColour = color(207, 99, 151 ,90); 
+
+}
 
 /////////////////////////////////
 
 Wallpaper 8:
 
+//your parameter variables go here!
+let middle = 0; //origin is now 0
+let cherry_rotation = 30; //rotation
+let cherry_size = 50; //making it bigger
+let cherry_shine = 30; 
+let cherry_shade = 10;
+let cherry_dot = 3; 
+let circleColour; //colour of circles rest of the parameter is on line 25
+let circleSize = 0; // smaller background circle size
+let bigCircle_size = 160 //background circle size
 
+
+function setup_wallpaper(pWallpaper) {
+  //pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset = 50;
+
+  circleColour = color(245, 208, 226 ,90); //lightpink
+
+}
+
+function wallpaper_background() {
+  background(255); //white colour
+
+}
 
 /////////////////////////////////
 
 Wallpaper 9:
+
+//your parameter variables go here!
+let middle = -15; //origin is now 0
+let cherry_rotation = 0; //rotation
+let cherry_size = 100; //making it bigger
+let cherry_shine = 80; 
+let cherry_shade = 60;
+let cherry_dot = 0; 
+let circleColour; //colour of circles rest of the parameter is on line 25
+let circleSize = 20; // smaller background circle size
+let bigCircle_size = 200 //background circle size
+
+
+function setup_wallpaper(pWallpaper) {
+  //pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset = 50;
+
+  circleColour = color(255 ,90); //white
+
+}

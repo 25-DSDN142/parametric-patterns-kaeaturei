@@ -21,7 +21,7 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.grid_settings.cell_height = 200;
   pWallpaper.grid_settings.row_offset = 50;
 
-  circleColour = color(255,90); 
+  circleColour = color(255,90); //white
 
 }
 
@@ -35,8 +35,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   //background circles
   strokeWeight (0);
   fill (circleColour);
-  ellipse (middle+100,middle+100,bigCircle_size,bigCircle_size);
-  ellipse (middle,middle,circleSize,circleSize);
+  ellipse (middle+100,middle+100,bigCircle_size,bigCircle_size); //big centre circle
+  ellipse (middle,middle,circleSize,circleSize); //little circles 
   ellipse (middle+200,middle+200,circleSize,circleSize);
   ellipse (middle,middle+200,circleSize,circleSize);
   ellipse (middle+200,middle,circleSize,circleSize);
@@ -44,29 +44,28 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   
   push();
-  translate(90, 105); //this makes the cherry get to the middle of the grid
+  translate(90, 105); //this makes the cherry get to the middle of the grid since I didn't originally make it in the middle
   
   rotate(cherry_rotation); // rotate around center
   //setup - run once when the code is first starts
 
   //shadow one
   strokeWeight(0);
-  fill(69, 0, 0);
+  fill(69, 0, 0); //darker red
   ellipse(middle -12, middle + 23, cherry_size, cherry_size);
   ellipse(middle - 18, middle + 27, cherry_size, cherry_size);
 
   //shadow two
   strokeWeight(0);
-  fill(69, 0, 0);
+  fill(69, 0, 0); //darker red
   ellipse(middle + 53, middle + 23, cherry_size, cherry_size);
   ellipse(middle + 46, middle + 28, cherry_size, cherry_size);
 
   // cherry one
-
   strokeWeight(0);
 
   //if statement
-  if (middle > -1) {
+  if (middle > -1) { //making it change colour if middle number is changed
   fill(110, 24, 31); // darker red
 } else {
   fill(173, 26, 38); // bright red
@@ -75,10 +74,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   ellipse(middle - 15, middle + 20, cherry_size, cherry_size);
   ellipse(middle - 22.5, middle + 27, cherry_size, cherry_size);
 
-
   //cherry two
   strokeWeight(0);
-   if (middle > -1) {
+   if (middle > -1) { 
   fill(110, 24, 31); // darker red
 } else {
   fill(173, 26, 38); // bright red
@@ -88,7 +86,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   ellipse(middle + 42.5, middle + 27, cherry_size, cherry_size);
 
   //stem, the shape was created with the help of ChatGPT AI
-  stroke(15, 51, 11);
+  stroke(15, 51, 11); //green
   strokeWeight(2);
   noFill ();
 
@@ -98,28 +96,25 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   endShape();
 
   fill(15, 51, 11);
-  ellipse(middle - 20, middle + 2.5, 4, 4);
-
+  ellipse(middle - 20, middle + 2.5, 4, 4); //little dots are the end of the stem
   fill(15, 51, 11);
-  ellipse(middle + 43, middle + 2.5, 4, 4);
+  ellipse(middle + 43, middle + 2.5, 4, 4); //little dots are the end of the stem
 
   //tip of the stem
   strokeWeight(0);
-  fill(15, 51, 11);
+  fill(15, 51, 11); //green
   ellipse(middle+20, middle-73, 5, 10);
-
   strokeWeight(0);
-  fill(15, 51, 11);
+  fill(15, 51, 11); //green
   ellipse(middle+23, middle-71, 5, 5);
-
   strokeWeight(0);
-  fill(15, 51, 11);
+  fill(15, 51, 11); //green
   ellipse(middle+17, middle-71, 5, 5);
 
 
   //shine on cherry
   strokeWeight(0);
-  fill(255);
+  fill(255); //white
   ellipse(middle - 30, middle + 20, cherry_shine, cherry_shine);
   strokeWeight(0);
    if (middle > -1) {
@@ -135,21 +130,21 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 } else {
   fill(173, 26, 38); // bright red
 }
-  ellipse(middle - 22, middle + 10, cherry_shade, cherry_shade);
+  ellipse(middle - 22, middle + 10, cherry_shade, cherry_shade); //covering the white lines from the shine that I don;t want to be seen
   strokeWeight(0);
    if (middle > -1) {
   fill(110, 24, 31); // darker red
 } else {
   fill(173, 26, 38); // bright red
 }
-  ellipse(middle - 40, middle + 30, cherry_shade, cherry_shade);
+  ellipse(middle - 40, middle + 30, cherry_shade, cherry_shade); //covering the white lines from the shine that I don;t want to be seen
   strokeWeight(0);
   fill(255);
-  ellipse(middle - 42, middle + 29, cherry_dot, cherry_dot);
+  ellipse(middle - 42, middle + 29, cherry_dot, cherry_dot); //little white dot on the shine
 
   //shine on cherry
   strokeWeight(0);
-  fill(255);
+  fill(255); //white
   ellipse(middle + 35, middle + 20, cherry_shine, cherry_shine);
   strokeWeight(0);
     if (middle > -1) {
@@ -165,25 +160,23 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 } else {
   fill(173, 26, 38); // bright red
 }
-  ellipse(middle + 43, middle + 10, cherry_shade, cherry_shade);
+  ellipse(middle + 43, middle + 10, cherry_shade, cherry_shade); //covering the white lines from the shine that I don;t want to be seen
   strokeWeight(0);
     if (middle > -1) {
   fill(110, 24, 31); // darker red
 } else {
   fill(173, 26, 38); // bright red
 }
-  ellipse(middle + 25, middle + 30, cherry_shade, cherry_shade);
+  ellipse(middle + 25, middle + 30, cherry_shade, cherry_shade); //covering the white lines from the shine that I don;t want to be seen
   strokeWeight(0);
-  fill(255);
-  ellipse(middle + 24, middle + 29, cherry_dot, cherry_dot);
-
+  fill(255); //white
+  ellipse(middle + 24, middle + 29, cherry_dot, cherry_dot); // little white dot on the shine
+ 
   //shine on stem
   strokeWeight(0);
-  fill(83, 130, 86)
+  fill(83, 130, 86) //light green
   ellipse(middle+19, middle - 75, 2, 5);
-
   ellipse(middle+17, middle - 72, 4, 2);
-
   ellipse(middle-21, middle + 2.5, 3, 5);
   ellipse(middle+42, middle + 2.5, 3, 5);
 
