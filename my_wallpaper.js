@@ -1,5 +1,5 @@
 //your parameter variables go here!
-let middle = 0; //origin is now 0
+let middle = -1; //origin is now 0
 let cherry_rotation = 0; //rotation
 let cherry_size = 50; //making it bigger
 let cherry_shine = 30; 
@@ -13,16 +13,15 @@ let bigCircle_size = 150 //background circle size
 function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.output_mode(GRID_WALLPAPER);
-
-  pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.resolution(A3);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width = 200;
   pWallpaper.grid_settings.cell_height = 200;
   pWallpaper.grid_settings.row_offset = 50;
 
-  circleColour = color(207, 99, 151, 80); //light green
+  circleColour = color(255,90); 
 
 }
 
@@ -188,16 +187,5 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   ellipse(middle-21, middle + 2.5, 3, 5);
   ellipse(middle+42, middle + 2.5, 3, 5);
 
-  //if statement
-  if (middle == -15) {
-  strokeWeight (0);
-  fill(245, 208, 226);
-  ellipse(150,90,20,20);
-  ellipse(150,103,20,20);
-  ellipse(150,118,20,20);
-  }
-
-  pop(); //end of the centering of the cherry, background doesn't need to be
-
+  pop(); //end of the centering of the cherry
 }
-  

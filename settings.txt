@@ -10,23 +10,30 @@ Your final settings.txt will look something like this when you are finished:
 Wallpaper 1:
 
 //your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+let middle = 0; //origin is now 0
+let cherry_rotation = 0; //rotation
+let cherry_size = 50; //making it bigger
+let cherry_shine = 30; 
+let cherry_shade = 10;
+let cherry_dot = 3; 
+let circleColour; //colour of circles rest of the parameter is on line 25
+let circleSize = 90; // smaller background circle size
+let bigCircle_size = 150 //background circle size
+
 
 function setup_wallpaper(pWallpaper) {
+  //pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(true); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.cell_width = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset = 50;
+
+  circleColour = color(207, 99, 151, 80); 
+
 }
 
 /////////////////////////////////
@@ -34,21 +41,142 @@ function setup_wallpaper(pWallpaper) {
 Wallpaper 2:
 
 //your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+let middle = -1; //origin is now 0
+let cherry_rotation = 0; //rotation
+let cherry_size = 50; //making it bigger
+let cherry_shine = 30; 
+let cherry_shade = 10;
+let cherry_dot = 3; 
+let circleColour; //colour of circles rest of the parameter is on line 25
+let circleSize = 90; // smaller background circle size
+let bigCircle_size = 150 //background circle size
+
 
 function setup_wallpaper(pWallpaper) {
+  //pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(true); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 0;
+  pWallpaper.grid_settings.cell_width = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset = 50;
+
+  circleColour = color(255,90); 
+
 }
+
+/////////////////////////////////
+
+Wallpaper 3:
+//your parameter variables go here!
+let middle = 0; //origin is now 0
+let cherry_rotation = 340; //rotation
+let cherry_size = 80; //making it bigger
+let cherry_shine = 60; 
+let cherry_shade = 40;
+let cherry_dot = 10; 
+let circleColour; //colour of circles rest of the parameter is on line 25
+let circleSize = 90; // smaller background circle size
+let bigCircle_size = 150 //background circle size
+
+
+function setup_wallpaper(pWallpaper) {
+  //pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(true); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset = 50;
+
+  circleColour = color(207, 99, 151, 80); 
+
+}
+
+/////////////////////////////////
+
+Wallpaper 4:
+
+//your parameter variables go here!
+let middle = 0; //origin is now 0
+let cherry_rotation = 180; //rotation
+let cherry_size = 50; //making it bigger
+let cherry_shine = 30; 
+let cherry_shade = 10;
+let cherry_dot = 3; 
+let circleColour; //colour of circles rest of the parameter is on line 25
+let circleSize = 90; // smaller background circle size
+let bigCircle_size = 0 //background circle size
+
+
+function setup_wallpaper(pWallpaper) {
+  //pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(true); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset = 50;
+
+  circleColour = color(245, 208, 226 ,90); 
+
+}
+
+/////////////////////////////////
+
+Wallpaper 5:
+
+//your parameter variables go here!
+let middle = -1; //origin is now 0
+let cherry_rotation = 0; //rotation
+let cherry_size = 30; //making it bigger
+let cherry_shine = 10; 
+let cherry_shade = -2;
+let cherry_dot = 0; 
+let circleColour; //colour of circles rest of the parameter is on line 25
+let circleSize = 90; // smaller background circle size
+let bigCircle_size = 150 //background circle size
+
+
+function setup_wallpaper(pWallpaper) {
+  //pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(true); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset = 50;
+
+  circleColour = color( 207, 99, 151 ,90); 
+
+}
+
+/////////////////////////////////
+
+Wallpaper 6:
+
+
+
+/////////////////////////////////
+
+Wallpaper 7:
+
+
+
+/////////////////////////////////
+
+Wallpaper 8:
+
+
+
+/////////////////////////////////
+
+Wallpaper 9:
